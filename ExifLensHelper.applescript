@@ -10,7 +10,8 @@ tell application "Finder"
 	set theSelection to selection
 	repeat with oneItem in theSelection
 		--only files with these extensions will be used
-		if name extension of oneItem is "JPG" or "PNG" or "TIF" or "TIFF" or "BMP" or "JPEG" or "DNG" or "RAW" or "ORF" or "ARW" or "jpg" or "png" or "tif" or "tiff" or "bmp" or "jpeg" or "dng" or "raw" or "orf" or "arw" then
+		set ext to name extension of oneItem
+		if ext is "JPG" or ext is "ARW" or ext is "TIF" or ext is "TIFF" or ext is "BMP" or ext is "JPEG" or ext is "DNG" or ext is "RAW" or ext is "ORF" or ext is "PNG" or ext is "jpg" or ext is "png" or ext is "tif" or ext is "tiff" or ext is "bmp" or ext is "jpeg" or ext is "dng" or ext is "raw" or ext is "orf" or ext is "arw" then
 			set end of myImages to oneItem
 		end if
 	end repeat
